@@ -50,7 +50,7 @@ set t_Co=256
 autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
-set relativenumber
+set nu
 set t_ut=""
 set belloff=all
 nnoremap \\ :FZF<CR>
