@@ -20,8 +20,8 @@ set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-      silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -50,7 +50,7 @@ set t_Co=256
 autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
-set nu
+set relativenumber
 set t_ut=""
 set belloff=all
 nnoremap \\ :FZF<CR>
