@@ -15,7 +15,7 @@ set hlsearch
 set nobackup
 set mouse=ar
 set incsearch
-set clipboard=unnamed
+set clipboard=unnamedplus
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
